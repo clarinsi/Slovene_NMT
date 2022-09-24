@@ -1,0 +1,6 @@
+services:
+  translator:
+    volumes:
+      - type: bind
+        source: .
+        target: /opt/nmt

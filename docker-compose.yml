@@ -1,0 +1,12 @@
+services:
+  translator:
+    restart: unless-stopped
+    image: rsdo/ds4/nemo-nmt:latest
+    build: .
+    ports:
+      - 4000:4000
+    volumes:
+      - type: bind
+        source: ./models/v1.2.6
+        target: /opt/nmt/models/v1.2.6
+        read_only: true

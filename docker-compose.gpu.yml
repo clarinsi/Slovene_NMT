@@ -1,0 +1,8 @@
+services:
+  translator:
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities:
+              - gpu
